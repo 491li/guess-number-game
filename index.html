@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>数字猜谜游戏</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+    }
+    .keypad button {
+      width: 60px;
+      height: 60px;
+      font-size: 20px;
+      margin: 5px;
+    }
+    #display {
+      margin: 15px 0;
+      font-size: 22px;
+    }
+    #hint {
+      margin-top: 15px;
+      font-size: 20px;
+      min-height: 28px;
+      font-weight: bold;
+    }
+    .restart {
+  margin-top: 20px;
+  padding: 10px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 20px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.restart:hover {
+  background-color: #43a047;
+  transform: scale(1.05);
+}
+  </style>
+</head>
+<body>
+
+  <h1>🎯 数字猜谜游戏</h1>
+
+  <div id="level"></div>
+  <div id="levelTip"></div>
+
+  <div id="display">
+    当前输入：<span id="current"> </span>
+  </div>
+  
+  <div id="hint"></div>
+
+
+
+
+<button onclick="restartGame()" class="restart">
+  🔄 重玩
+</button>
+
+
+  <div class="keypad">
+    <button onclick="press(1)">1</button>
+    <button onclick="press(2)">2</button>
+    <button onclick="press(3)">3</button><br>
+    <button onclick="press(4)">4</button>
+    <button onclick="press(5)">5</button>
+    <button onclick="press(6)">6</button><br>
+    <button onclick="press(7)">7</button>
+    <button onclick="press(8)">8</button>
+    <button onclick="press(9)">9</button><br>
+    <button onclick="clearInput()">清空</button>
+    <button onclick="press(0)">0</button>
+    <button onclick="submitGuess()">确认</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
