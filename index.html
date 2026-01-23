@@ -2,46 +2,88 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>数字猜谜游戏</title>
   <style>
-    
-    body {
-      font-family: Arial;
-      text-align: center;
-    }
-    .keypad button {
-      width: 60px;
-      height: 60px;
-      font-size: 20px;
-      margin: 5px;
-    }
-    #display {
-      margin: 15px 0;
-      font-size: 22px;
-    }
-    #hint {
-      margin-top: 15px;
-      font-size: 20px;
-      min-height: 28px;
-      font-weight: bold;
-    }
-    .restart {
-  margin-top: 20px;
-  padding: 10px 24px;
-  font-size: 18px;
-  border: none;
-  border-radius: 20px;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-.restart:hover {
-  background-color: #43a047;
-  transform: scale(1.05);
-}
-  </style>
+  body {
+    font-family: Arial;
+    text-align: center;
+    margin: 0;
+    padding: 12px;
+    background: #f7f7f7;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #level, #levelTip {
+    font-size: 18px;
+    margin: 6px 0;
+  }
+
+  #display {
+    margin: 15px 0;
+    font-size: 20px;
+  }
+
+  #current {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  #hint {
+    margin-top: 15px;
+    font-size: 18px;
+    min-height: 32px;
+    font-weight: bold;
+  }
+
+  .restart {
+    margin-top: 18px;
+    padding: 10px 26px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .restart:hover {
+    background-color: #43a047;
+    transform: scale(1.05);
+  }
+
+  .keypad {
+    margin: 20px auto;
+    max-width: 320px;   /* 🔑 限制宽度，手机更好看 */
+  }
+
+  .keypad button {
+    width: 30%;
+    height: 60px;
+    font-size: 20px;
+    margin: 5px 1%;
+    border-radius: 10px;
+    border: none;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .keypad button:active {
+    transform: scale(0.95);
+    background: #e0e0e0;
+  }
+</style>
+
 </head>
 
 
@@ -84,4 +126,5 @@
   <script src="game.js"></script>
 </body>
 </html>
+
 
